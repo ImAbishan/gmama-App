@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="container">
+  <div class="navbar">
+    <img src="assets/logo.png" class="logo">
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="specs">Specification</a></li>
+      <li><a href="home">Products</a></li>
+      <li><a href="contact">Contact Us</a></li>
+
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="lef-col">
+      <h1>
+        The <br> Real <br> Sound
+      </h1>
+    </div>
+
+    <div class="right-col">
+         <p>
+           Click Here To Listen
+         </p>
+      <img src="assets/play.png" id="icon">
+
+    </div>
+
+  </div>
+</div>
+
+<!--  <div class="watch-container">-->
+<!--    <h1 id="time" class="watch">00:00:00</h1>-->
+<!--  </div>-->
+
+<!--  -->
+<!--  <div class="time-container">-->
+
+<!--    <div class="controls">-->
+<!--      <input type="number" id="hoursInput" min="0" max="99" placeholder="Hours">-->
+<!--      <input type="number" id="minutesInput" min="0" max="59" placeholder="Minutes">-->
+<!--      <input type="number" id="secondsInput" min="0" max="59" placeholder="Seconds">-->
+<!--      <button id="set">Set Timer</button>-->
+<!--      <button id="start">Start</button>-->
+<!--      <button id="pause">Pause</button>-->
+<!--      <button id="clear">Clear</button>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+
+<audio id="mySong">
+
+  <source src="assets/Nila%20Kaaigiradhu%20(Unplugged).mp3" type="audio/mp3">
+
+</audio>
+
+<script>
+
+
+  var mySong = document.getElementById("mySong");
+  var icon = document.getElementById("icon");
+
+  icon.onclick = function () {
+    if(mySong.paused){
+      mySong.play();
+      icon.src = "assets/pause.png"
+    }
+
+    else{
+      mySong.pause();
+      icon.src = "assets/play.png"
+    }
+
+  }
+
+
+</script>
+
+
+
+
+<!--<script src="script.js"></script>-->
+
+
+</body>
+</html>
